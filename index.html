@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description"
+        content="projeto autoral realizado como método avaliativo do curso da Descomplica com o instituto Nu">
+    <meta name="keywords" content="HTML,CSS,JavaScript">
+    <meta name="author" content="Guadalupe Monteiro">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <title>Eclipse dermocosméticos</title>
+</head>
+
+<body>
+    <header id="carouselCaptions" class="carousel slide">
+        <!-- nav navbar-dark  -->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top pt-3 fs-4">
+            <div class="container">
+                <a class="navbar-brand text-white fs-4" href="#">Eclipse</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuLateral"
+                    aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="menuLateral"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h2 class="offcanvas-title text-white" id="offcanvasNavbarLabel">Menu</h2>
+                        <button type="button" id="close" class="btn-close" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+
+                    <!-- links -->
+                    <div class="offcanvas-body justify-content-evenly align-items-center">
+                        <ul class="navbar-nav">
+                            <li class="nav-item mx-4">
+                                <a class="nav-link active text-white" aria-current="page" href="#our-products">Nossos
+                                    produtos</a>
+                            </li>
+                            <li class="nav-item mx-4">
+                                <a class="nav-link text-white" href="#our-team">Nosso time</a>
+                            </li>
+                            <li class="nav-item mx-4">
+                                <a class="nav-link text-white" href="#who-we-are">Quem somos</a>
+                            </li>
+                        </ul>
+
+                        <!-- search tool -->
+                        <div class="d-flex align-items-center" id="form-container">
+                            <form>
+                                <div class="input-group">
+                                    <input type="text" class="form-control border-0 fs-4"
+                                        placeholder="Procurando por algo?" aria-label="Username"
+                                        aria-describedby="basic-addon1">
+                                    <span class="input-group-text bg-white fs-5 btn" id="basic-addon1"><i
+                                            class="bi bi-search d-flex align-self-center opacity-50 fs-3"
+                                            id="search-tool"></i></span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- icons -->
+                <div class="nav-icons">
+                    <button type="button" class="btn"><i class="d-flex bi bi-person px-0 text-white" id="person"></i>
+                    </button>
+                    <button type="button" class="btn position-relative">
+                        <span class="badge position-absolute top-50 bg-danger fs-6" id="badge-bag">1</span><i
+                            class="d-flex bi bi-bag px-0 text-white" id="bag" data-bs-toggle="modal"
+                            data-bs-target="#shoppingCart"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- carousel -->
+        <div id="carouselIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="0" class="active"
+                    aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="3"
+                    aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner carousel slide carousel-fade">
+                <div class="carousel-item active position-relative">
+                    <img src="img/spray.png" class="d-block w-100" alt="mulher aplicando tônico na face">
+                    <div class="cap position-absolute">
+                        <h2 class="text-white">Responda ao quiz e obtenha o kit ideal para as necessidades da sua pele
+                        </h2>
+                        <button type="button" class="btn position-absolute">Responder quiz</button>
+                    </div>
+                </div>
+                <div class="carousel-item position-relative">
+                    <img src="img/skin.png" class="d-block w-100" alt="mulher com pele radiante">
+                    <div class="cap position-absolute">
+                        <h2 class="text-white">Obtenha uma pele radiante com nossos produtos</h2>
+                        <button type="button" class="btn position-absolute align-self-end">Comprar agora</button>
+                    </div>
+                </div>
+                <div class="carousel-item position-relative">
+                    <img src="img/vitaminac.png" class="d-block w-100" alt="sérum vitamina c">
+                    <div class="cap position-absolute purple-txt">
+                        <h2>Obtenha uma pele iluminada com o novo sérum vitamina C</h2>
+                        <button type="button" class="btn position-absolute">Compre agora</button>
+                    </div>
+                </div>
+                <div class="carousel-item position-relative">
+                    <img src="img/secativo.png" class="d-block w-100" alt="mulher com pele radiante">
+                    <div class="cap position-absolute">
+                        <h2 class="text-white">Experimente o gel secativo para acne</h2>
+                        <button type="button" class="btn position-absolute align-self-end">Experimentar
+                            agora</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- products -->
+    <section class="products-container mx-auto" id="our-products">
+        <h2 class="pt-5"><span>Nossos</span> produtos</h2>
+        <div class="row mt-n5 products-wrapper mx-auto">
+            <div class="col-md-6 col-lg-4 mt-5 wow fadeInUp" data-wow-delay=".2s"
+                style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                <div class="blog-grid">
+                    <div class="blog-grid-img position-relative"><img src="img/gel.png" alt="produto gel facial"></div>
+                    <div class="blog-grid-text p-4">
+                        <h2 class="mb-3">Gel de limpeza facial</h2>
+                        <p class="display-30">O gel desobstrui os poros provomendo limpeza, proteção e hidratação da
+                            pele.</p>
+                        <p class="price justify-content-md-start">R$ 54,90</p>
+                        <div class="d-grid gap-2 d-md-flex  justify-content-md-end">
+                            <a class="btn-buy btn me-md-2" href="#" role="button">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mt-5 wow fadeInUp" data-wow-delay=".4s"
+                style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+                <div class="blog-grid">
+                    <div class="blog-grid-img position-relative"><img src="img/retinol.png" alt="produto sérum retinol">
+                    </div>
+                    <div class="blog-grid-text p-4">
+                        <h2 class="mb-3">Sérum Retinol</h2>
+                        <p class="display-30">Com 0,3% de retinol em sua composição clareia manchas, atenua rugas, reduz
+                            os poros.
+                        </p>
+                        <p class="price justify-content-md-start">R$ 74,00</p>
+                        <div class="btn-wrapper d-grid gap-2 d-md-flex justify-content-md-end">
+                            <a class="btn-buy btn me-md-2" href="#" role="button">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mt-5 wow fadeInUp" data-wow-delay=".6s"
+                style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
+                <div class="blog-grid">
+                    <div class="blog-grid-img position-relative"><img src="img/kit.png" alt="kit de hidaratação"></div>
+                    <div class="blog-grid-text p-4">
+                        <h2 class="mb-3">Kit hidaratação</h2>
+                        <p class="display-30">Kit especialmente preparado para hidratar até as camadas mais profundas da
+                            pele.</p>
+                        <p class="price justify-content-md-start">R$ 250,00</p>
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <a class="btn-buy btn me-md-2" href="#" role="button">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-n5 products-wrapper mx-auto">
+            <div class="col-md-6 col-lg-4 mt-5 wow fadeInUp" data-wow-delay=".8s"
+                style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInUp;">
+                <div class="blog-grid">
+                    <div class="blog-grid-img position-relative"><img src="img/hialuronico.png"
+                            alt="produto sérum ácido hialurônico"></div>
+                    <div class="blog-grid-text p-4">
+                        <h2 class="mb-3">Sérum hialurônico</h2>
+                        <p class="display-30">Com ação antioxidante promove hidratação e fortalece a barreira cutânea.
+                        </p>
+                        <p class="price justify-content-md-start">R$ 64,00</p>
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <a class="btn-buy btn me-md-2" href="#" role="button">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mt-5 wow fadeInUp" data-wow-delay="1s"
+                style="visibility: visible; animation-delay: 1s; animation-name: fadeInUp;">
+                <div class="blog-grid">
+                    <div class="blog-grid-img position-relative"><img src="img/tonico.png" alt="produto tônico facial">
+                    </div>
+                    <div class="blog-grid-text p-4">
+                        <h2 class="mb-3">Tônico Facial</h2>
+                        <p class="display-30">Possui efeito calmante enquanto hidrata e preserva a umidade da pele.</p>
+                        <p class="price justify-content-md-start">R$ 54,90</p>
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <a class="btn-buy btn me-md-2" href="#" role="button">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mt-5 wow fadeInUp" data-wow-delay="1.2s"
+                style="visibility: visible; animation-delay: 1.2s; animation-name: fadeInUp;">
+                <div class="blog-grid">
+                    <div class="blog-grid-img position-relative"><img src="img/serum-vitac.png"
+                            alt="produto sérum vitamina c">
+                    </div>
+                    <div class="blog-grid-text p-4">
+                        <h2 class="mb-3">Sérum vitamina C</h2>
+                        <p class="display-30">Antioxidante que ilumina, uniformiza e melhora a textura da pele.</p>
+                        <p class="price justify-content-md-start">R$ 64,00</p>
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <a class="btn-buy btn me-md-2" href="#" role="button">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- our team -->
+    <section id="our-team">
+        <h2 class="pt-5"><span>Nosso</span> time</h2>
+        <div class="container-team">
+            <div class="wrapper-team">
+                <div class="img-team">
+                    <img src="img/person1.jpg" alt="colaboradora Ana">
+                </div>
+                <div class="text-team">
+                    <h2>ana</h2>
+                    <p>Gestora de Marketing</p>
+                </div>
+                <div class="social-media-team mx-auto">
+                    <a href="#" target="_blank"><img src="img/linkedin.png" alt="logo linkedin"></a>
+                    <a href="#" target="_blank"><img src="img/facebook.png" alt="logo facebook"></a>
+                    <a href="#" target="_blank"><img src="img/instagram.png" alt="logo instagram"></a>
+                </div>
+            </div>
+            <div class="wrapper-team">
+                <div class="img-team">
+                    <img src="img/person2.jpg" alt="colaborador Júlio">
+                </div>
+                <div class="text-team">
+                    <h2>Júlio</h2>
+                    <p>Gerente de Vendas</p>
+                </div>
+                <div class="social-media-team mx-auto">
+                    <a href="#" target="_blank"><img src="img/linkedin.png" alt="logo linkedin"></a>
+                    <a href="#" target="_blank"><img src="img/facebook.png" alt="logo facebook"></a>
+                    <a href="#" target="_blank"><img src="img/instagram.png" alt="logo instagram"></a>
+                </div>
+            </div>
+            <div class="wrapper-team">
+                <div class="img-team">
+                    <img src="img/person3.jpg" alt="colaboradora Carla">
+                </div>
+                <div class="text-team">
+                    <h2>Carla</h2>
+                    <p>Desenvolvedora</p>
+                </div>
+                <div class="social-media-team mx-auto">
+                    <a href="#" target="_blank"><img src="img/linkedin.png" alt="logo linkedin"></a>
+                    <a href="#" target="_blank"><img src="img/facebook.png" alt="logo facebook"></a>
+                    <a href="#" target="_blank"><img src="img/instagram.png" alt="logo instagram"></a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- who we are -->
+    <section id="who-we-are">
+        <h2 class="pt-5">Quem<span> somos</span></h2>
+        <p>somos uma empresa que nasceu com o propósito de entregar os melhores dermocosnéticos com preços acessíveis e
+            com
+            origem 100% brasileira.</p>
+        <img src="img/cream.svg" alt="ilustração creme sobre as mãos">
+    </section>
+
+    <footer class="text-center text-lg-start">
+        <div class="container p-4 pb-0">
+            <section>
+                <div class="row">
+                    <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                        <h2 class="text-uppercase mb-4 font-weight-bold fs-4">
+                            Eclipse
+                        </h2>
+                    </div>
+
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                        <h2 class="text-uppercase mb-4 font-weight-bold fs-4">Links</h2>
+                        <p class="fs-5">
+                            <a href="#our-products">Produtos</a>
+                        </p>
+                        <p class="fs-5">
+                            <a href="#our-team">Nosso time</a>
+                        </p>
+                        <p class="fs-5">
+                            <a href="#who-we-are">Quem somos</a>
+                        </p>
+                    </div>
+
+                    <hr class="w-100 clearfix d-md-none" />
+
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                        <h2 class="text-uppercase mb-4 font-weight-bold fs-4">Contato</h2>
+                        <p class="fs-5"><i class="bi bi-house mr-3 fs-3"></i> Rua Getúlio Vargas, Brasil-SP</p>
+                        <p class="fs-5"><i class="bi bi-envelope mr-3 fs-3"></i> eclipse@gmail.com</p>
+                        <p class="fs-5"><i class="bi bi-phone mr-3  fs-3"></i> (088) 98888-8888</p>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="my-3">
+            <!-- Section: Copyright -->
+            <section class="p-3 pt-0">
+                <div class="row d-flex align-items-center">
+                    <div class="col-md-7 col-lg-8 text-center text-md-start">
+                        <!-- Copyright -->
+                        <div class="p-3">
+                            <small>© 2023 Copyright:<a class="text-white" href="#"> eclipse</a></small>
+                        </div>
+                    </div>
+
+                    <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+                        <a class="btn align-content-center mx-auto m-1" class="text-white" role="button" href="#"><i
+                                class="bi bi-facebook fs-2"></i></a>
+                        <a class="btn m-1" class="text-white" role="button" href="#"><i
+                                class="bi bi-whatsapp fs-2"></i></a>
+                        <a class="btn m-1" class="text-white" role="button" href="#"><i
+                                class="bi bi-google fs-2"></i></a>
+                        <a class="btn m-1" class="text-white" role="button" href="#"><i
+                                class="bi bi-instagram fs-2"></i></a>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+    </footer>
+
+    <script>
+        const nav = document.querySelector('.navbar');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY >= 530) {
+                nav.classList.add('navbar-scrolled');
+            } else nav.classList.remove('navbar-scrolled');
+        })
+    </script>
+    <script src="../src/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

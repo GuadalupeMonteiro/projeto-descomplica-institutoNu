@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.navbar {
+    transition: all .4s ease;
+}
+
+.navbar-scrolled {
+    background-color: #8e7eb9;
+}
+
+nav ul li a:hover {
+    opacity: .8;
+}
+
+#search-tool,
+#close {
+    padding-top: .2rem;
+    color: #7C2AE8;
+}
+
+#person {
+    padding-top: .2rem;
+    font-size: 3.2rem;
+}
+
+#bag {
+    font-size: 2.7rem;
+}
+
+.carousel-item img {
+    height: 90vh;
+    object-fit: cover;
+    filter: brightness(.7);
+}
+
+.cap {
+    max-width: 27rem;
+    top: 25%;
+    right: 7%;
+}
+
+.cap h2 {
+    color: white;
+    font-size: 2.6rem;
+}
+
+.cap button,
+a.btn-buy {
+    width: 15rem;
+    margin-top: .5rem;
+    padding: .8rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: white;
+    background-color: #8E7EB9;
+    border-radius: .5rem;
+}
+
+a.btn-buy {
+    width: 9rem;
+}
+
+.cap button:hover,
+.cap button:focus,
+a.btn-buy:hover,
+a.btn-buy:focus {
+    color: #8E7EB9;
+    background-color: #fff4d4;
+    border: 1.5px solid #8E7EB9;
+}
+
+.products-container,
+#who-we-are {
+    padding: 2rem;
+    background-color: #fff4d4;
+}
+
+.products-container h2,
+#our-team h2,
+#who-we-are h2 {
+    color: #8E7EB9;
+    font-size: 8rem;
+}
+
+.products-container h2:not(.blog-grid-text h2),
+#our-team h2,
+#who-we-are h2 {
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.products-container h2 span,
+#our-team h2 span,
+#who-we-are h2 span {
+    font-family: 'Bebas Neue', sans-serif;
+    color: #fff4d4;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: #8E7EB9;
+}
+
+#our-team h2 span {
+    color: #DEDFFE;
+}
+
+.products-wrapper {
+    width: 75%;
+    padding: 2rem;
+}
+
+.blog-grid {
+    width: 90%;
+    margin: auto;
+    box-shadow: 0 0 12px #8e7eb953;
+    border: 0.8rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.blog-grid:hover {
+    transform: scale(1.03);
+    transition: all .2s ease-out;
+}
+
+.blog-grid-text h2 {
+    font-size: 2rem;
+}
+
+.blog-grid-text p {
+    font-size: 1.5rem;
+}
+
+.blog-grid-text .price {
+    color: #8E7EB9;
+    font-weight: 500;
+}
+
+.blog-grid img {
+    width: 100%;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem
+}
+
+section#our-team {
+    padding: 2rem 2rem 3.5rem 2rem;
+    background-color: #DEDFFE;
+}
+
+.container-team {
+    margin-top: 12rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.wrapper-team {
+    width: 30rem;
+    height: 32rem;
+    margin: .5rem;
+    background-color: #FFFAEC;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.img-team {
+    width: 20rem;
+    height: 20rem;
+    padding: 1.5rem;
+    background-color: #DEDFFE;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.img-team img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.text-team {
+    font-size: 2rem;
+    text-align: center;
+    line-height: 3.4rem;
+    color: #8E7EB9;
+    position: absolute;
+    top: 180px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#our-team .text-team h2 {
+    font-size: 3.6rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 4.4rem;
+}
+
+#our-team .text-team p {
+    min-width: 22rem;
+    margin-top: -2rem;
+}
+
+.social-media-team {
+    position: absolute;
+    bottom: 35px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-media-team a {
+    width: 20%;
+}
+
+.social-media-team a img {
+    width: 100%;
+}
+
+#who-we-are {
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#who-we-are p {
+    max-width: 90%;
+    margin-top: 4rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    align-self: center;
+}
+
+#who-we-are img {
+    width: 45%;
+    margin-right: 7rem;
+    align-self: flex-end;
+}
+
+footer,
+footer i,
+footer a {
+    color: #FFFAEC;
+    text-decoration: none;
+    background-color: #8e7eb9;
+}
+
+.nav-item a:focus,
+.nav-icons button:focus {
+    border: 2px solid #FFFAEC;
+}
+
+a:active,
+a:focus {
+    color: #575a7b;
+    text-decoration: none;
+    transition-timing-function: ease-in-out;
+    -ms-transition-timing-function: ease-in-out;
+    -moz-transition-timing-function: ease-in-out;
+    -webkit-transition-timing-function: ease-in-out;
+    -o-transition-timing-function: ease-in-out;
+    transition-duration: .2s;
+    -ms-transition-duration: .2s;
+    -moz-transition-duration: .2s;
+    -webkit-transition-duration: .2s;
+    -o-transition-duration: .2s;
+}
+
+@media screen and (max-width: 991px) {
+    #menuLateral {
+        background-color: rgba(255, 255, 255, .2);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+    }
+
+    .cap {
+        font-size: 1.7rem;
+        top: 68%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .cap h2 {
+        text-align: center;
+    }
+
+    .cap button {
+        min-width: 9rem;
+        margin-top: 33px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media screen and (max-width: 679px) {
+    .cap {
+        width: 22rem;
+        font-size: 1rem;
+    }
+
+    .products-wrapper {
+        width: 100%;
+    }
+
+    .wrapper-team:nth-of-type(2),
+    .wrapper-team:nth-of-type(3) {
+        margin-top: 10rem;
+    }
+
+    #who-we-are img {
+        width: 85%;
+        margin-right: -1rem;
+    }
+}
